@@ -6,17 +6,29 @@ pragma solidity ^0.8.0;
 // factories
 // Interraction
 
-contract myContract {
+
+
+// Interraction
+contract Ownable {
     address owner;
-    string sectet;
 
     modifier onlyOwner(){
         require(msg.sender == owner, "must be owner");
+        _;
     }
 
-    constructor (string memeory _secret) public {
+        constructor () publiv {
+            owner = msg.sender;
+        }
+}
+
+contract myContract {
+    string sectet;
+
+    constructor (string memeory _secret) is Ownable public {
         secret = _secret;
-        owner = msg.sender;
+        // owner = msg.sender;
+        super;
     }
 
     function getSecrect() public view onlyOwner returns(string memory){ // only owner can see secret
