@@ -32,6 +32,13 @@ describe('Deployment',()=>{
              await transaction.wait();
              expect(await counter.count()).to.equal(3);
         })
+
+
+            it("decrements the count", async () => {
+              transaction = await counter.decrement();
+              await transaction.wait();
+              expect(await counter.count()).to.equal(0);
+            });
     })
     
 
