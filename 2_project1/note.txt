@@ -1,2 +1,3 @@
 npm init
 npm insta --save-dev hardhat
+npx hardhat
