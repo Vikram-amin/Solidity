@@ -38,6 +38,10 @@ describe('Deployment',()=>{
               transaction = await counter.decrement();
               await transaction.wait();
               expect(await counter.count()).to.equal(0);
+
+              // can not decrement count bellow zero
+
+              await expect(counter.decrement()).to.be.reverted
             });
     })
     
