@@ -1,0 +1,20 @@
+moca function 
+it - run a test and amke sn assertion
+describe - group together 'it' functionbeforeEach exicute some gerneral setup code
+beforeEach - Exicute some general setup code.
+
+to run moca   -- npm run test
+
+
+                  "Moca structure"
+
+                    Mocha Starts
+                         |
+                 Deploy new contract    <-----------
+                         |                         |
+                Manupulate the contract            |
+                         |                         |   
+          Make an assertion about the contrect     |
+                         |_________________________|        
+
+
